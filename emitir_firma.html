@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Firmar Documento</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition" onload="formulario_inicial()">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="images/icon/logo.png" height="1" width="1" alt="EduBITS" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li>
+                            <a href="index.html">
+                                <i class="far fa-check-square"></i>Validar Documento</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-user"></i>Gestionar Firma</a>
+                                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                    <li>
+                                        <a href="crear_firma.html">Crear</a>
+                                    </li>
+                                    <li>
+                                        <a href="recargar_firma.html">Recargar</a>
+                                    </li>
+                                    <li>
+                                        <a href="verificar_firma.html">Verificar</a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="emitir_firma.html">
+                                <i class="fas fa-copy"></i>Firmar Documento</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                </a>
+            </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li>
+                            <a href="index.html">
+                                <i class="far fa-check-square"></i>Validar Documento</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-user"></i>Gestionar Firma</a>
+                                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                    <li>
+                                        <a href="crear_firma.html">Crear</a>
+                                    </li>
+                                    <li>
+                                        <a href="recargar_firma.html">Recargar</a>
+                                    </li>
+                                    <li>
+                                        <a href="verificar_firma.html">Verificar</a>
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            <a href="emitir_firma.html">
+                                <i class="fas fa-copy"></i>Firmar Documento</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop" onload="formulario_dinamico_certificado(), formulario_dinamico_curso()">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Validar por Hash..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 mb-5">
+                            
+                                   <form id="filehash" action="#" class="p-5 bg-white">
+
+                                    <div class="form-step-head card-innr">
+                                        <div class="step-head">
+                                            <div >
+                                                <h4 class="subtitle red-certi text-center">Autenticar Documento</h4>
+                                            </div>
+                                        </div>
+                                    </div><!-- .step-head -->
+                                    <br>
+                                    <h5 class="body-text-small">
+                                    Los CertiBITS guardan la integridad de tu archivo y la identidad de su emisor:
+                                    </h5>
+                                    <br>
+                                    <ul>
+                                        <li class="body-text-small red-certi">
+                                            <i class="fa fa-file"></i>
+                                            Sube un documento Pdf y crea un CertiBIT con tu firma Blockchain.
+                                        </li>
+                                        <li class="body-text-small red-certi">
+                                            <i class="fa fa-download"></i>
+                                            Valida la firma subiendo nuevamente el mismo archivo sin modificaciones.</li>
+                                        <li class="body-text-small red-certi">
+                                            <i class="fa fa-check"></i>
+                                            Comparte el documento con otros puedes agregar multiples firmas al mismo.
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <div class="gaps-2x"></div>
+                                    <h5 class="body-text">Suba aquí tu documento</h5>
+                                    <br>
+                                    <input id="myfilehash" name="file" type="file" />     
+                                    <br>
+                                    <br>                           
+                                    <h6 id="file_hash">CertiBits - Hash:</h6>
+                                    <br>
+                                    <br>
+                                <div class="row form-group">
+                                  <div class="col-md-12">
+                                    <input type="button" value="Firmar" class="btn btn-primary  py-2 px-5" data-toggle="modal" onclick="validar_formulario()">
+                                  </div>
+                                </div>
+                                <div class="sufee-alert alert with-close alert-success alert-dismissible fade show" id="alert_billetera" style="display:none;">
+                                    <span class="badge badge-pill badge-success">Transacción Exito</span>
+                                    Su firma criptografíca fue creada exitosamente
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+    
+                                <div class="alert alert-danger" role="alert" id="alert_form" style="display:none;">
+                                        Porfavor suba un documento
+                                </div>
+                  
+                    
+                              </form>
+                            </div>
+                          </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="copyright">
+                                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN CONTENT-->
+            			<!-- modal static -->
+			<div class="modal fade" id="staticModal" tabindex="-1" role="dialog" aria-labelledby="staticModalLabel" aria-hidden="true"
+            data-backdrop="static">
+               <div class="modal-dialog modal-lg" role="document">
+                   <div class="modal-content">
+                       <div class="modal-header">
+                           <h5 class="modal-title" id="staticModalLabel">Firma Digital</h5>
+                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                               <span aria-hidden="true">&times;</span>
+                           </button>
+                       </div>
+                       <div class="modal-body">
+                           <p>
+                               Ingrese su firma digital con la respectiva contraseña para hacer oficial el Diploma.
+                           </p>
+                           <form id="myform">
+                                <input id="myfile" name="file" type="file" />
+                                <input type="password" id="passwordkey" name="passwordkey" placeholder="Contraseña" class="form-control">
+                            </form>
+                       </div>
+                       <div class="modal-footer">
+                           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                           <button type="button" class="btn btn-primary" onclick="decrypt_wallet()">Confirm</button>
+                       </div>
+                       <div class="alert alert-danger" role="alert" id="alert_pass" style="display:none;">
+                        Porfavor llene el campo de contraseña
+                        </div>
+                        <div class="alert alert-danger" role="alert" id="alert_firma" style="display:none;">
+                            Porfavor cargue el archivo de su Firma
+                        </div>
+                   </div>
+               </div>
+           </div>
+           <!-- end modal static -->
+            <!-- END PAGE CONTAINER-->
+        </div>
+
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+    <script src="bundle.js"></script>
+    <script src="js/nuevo_diploma.js"></script>
+    <script src="js/carga_firma.js"></script>
+    <script src="js/decrypt_wallet.js"></script>
+    <script src="js/sha256.js"></script>
+    <script src="js/formulario_dinamico_diploma.js"></script>
+    <script src="js/validar_formulario_diploma.js"></script>
+    <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
+
+    <script>
+        curso = document.getElementById("curso")
+        fecha = document.getElementById("fecha")
+        nombre = document.getElementById("nombre")
+        cedula = document.getElementById("cedula")
+        tipo_certificado = document.getElementById("tipo_certificado")
+        nota = document.getElementById("nota")
+        tipo_curso = document.getElementById("tipo_curso")
+        lugar = document.getElementById("lugar")
+        link = document.getElementById("link")
+        email_estudiante = document.getElementById("email_estudiante")
+    </script>
+
+</body>
+
+</html>
+<!-- end document-->
